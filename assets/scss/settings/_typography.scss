@@ -1,0 +1,95 @@
+/* TYPOGRAPHY
+
+                 Email: hampus.engblom@gmail.com
+
+-------------------------------------------------------------------------------
+  DETAILS:
+
+    temp
+
+---------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------
+   *-base, reset like
+   ------------------------------------------------------------------------- */
+
+   $font-color-base:                      #404040            !default;
+   $font-size-base:                         16px               !default;
+   $font-style-base:                        normal             !default;
+   $font-variant-base:                      normal             !default;
+   $font-weight-base:                       normal             !default;
+   $font-family-base:                       $sans-serif        !default;
+
+   /* ! */
+   $line-height-base:                       1                  !default;
+
+
+/* ----------------------------------------------------------------------------
+    font-style as var.  fallbacks..
+  -------------------------------------------------------------------------- */
+    $sans-serif:
+    /* 	OS X (10.11+), iOS (9+)           */ -apple-system,
+    /*  BlinkMacSystemFont 	OS X, Chrome  */ BlinkMacSystemFont,
+    /*  Windows                           */ "Segoe UI",
+    /*  Android 4.0+                      */ "Roboto",
+    /*  Linux, KDE                        */ "Oxygen",
+    /*  Linux, Ubuntu                     */ "Ubuntu",
+    /*  Linux, GNOME                      */ "Cantarell",
+    /*  Firefox OS                        */ "Fira Sans",
+    /*  Android (until 3.2)               */ "Droid Sans",
+    /*  OS X (10.9)                       */ "Helvetica Neue",
+    /*  Fallback                          */ sans-serif,
+    /*                                    */
+    /*  macOS emoji                       */ "Apple Color Emoji",
+    /*  Windows emoji                     */ "Segoe UI Emoji",
+    /*  Windows emoji                     */ "Segoe UI Symbol",
+    /*  Linux emoji                       */ "Noto Color Emoji",
+    /*                                    */
+    /*                                    */ !default;
+
+    $monospace:
+    /*  macOS 10.10+                      */ "Menlo",
+    /*  Windows                           */ "Consolas",
+    /*  Android 4+                        */ "Roboto Mono",
+    /*  Ubuntu 10.10+                     */ "Ubuntu Monospace",
+    /*  KDE Plasma 5+                     */ "Noto Mono",
+    /*  KDE Plasma 4+                     */ "Oxygen Mono",
+    /*  Linux/OpenOffice fallback         */ "Liberation Mono",
+    /*  fallback                          */ monospace,
+    /*                                    */
+    /*  macOS emoji                       */ "Apple Color Emoji",
+    /*  Windows emoji                     */ "Segoe UI Emoji",
+    /*  Windows emoji                     */ "Segoe UI Symbol",
+    /*  Linux emoji                       */ "Noto Color Emoji",
+    /*                                    */
+    /*                                    */ !default;
+
+    $serif:
+    /*                                    */ Georgia, Times, "Times New Roman",
+    /* Fallback                           */ serif,
+    /*                                    */
+    /*                                    */ !default;
+
+
+
+html,
+button,
+input,
+select,
+textarea {
+  color: $font-color-base;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+.br {
+  display: block;
+}
