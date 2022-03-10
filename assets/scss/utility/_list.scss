@@ -1,0 +1,40 @@
+/** LISTS
+ * ------------------------------------------------------------------------- */
+
+.u-list {
+  /* List without padding and styling. */
+  &--stripped {
+    line-height: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    ul,
+    ol {
+      list-style: none;
+      padding: 0;
+    }
+  }
+
+  /* List without styling. */
+  &--unstyled {
+    list-style: none;
+    padding: 0;
+
+    ul,
+    ol {
+      list-style: none;
+    }
+  }
+
+  /* List without padding. */
+  &--fitted {
+    line-height: 1;
+    padding: 0;
+
+    ul,
+    ol {
+      padding: 0;
+    }
+  }
+}

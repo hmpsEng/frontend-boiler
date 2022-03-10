@@ -1,0 +1,139 @@
+/* BUTTON
+
+                 Email: hampus.engblom@gmail.com
+
+-------------------------------------------------------------------------------
+  DETAILS:
+
+  Button settings and application.
+  There is some variables here, but you dont need to fuck around with them.
+  It's all good
+
+  Sructure to make this substainable
+
+  variables
+  %buttons
+  | :hover
+  | :focus, active
+  | :muted
+  button form
+  nothing else
+
+---------------------------------------------------------------------------- */
+
+$btn-background: $grey-lighter !default;
+$btn-background-hover: color.adjust($btn-background, $darkness 10%) !default;
+$btn-color: $font-color-base !default;
+$btn-font-weight: 600 !default;
+$btn-font-family: $font-family-base !default;
+$btn-font-size: $font-size-base !default;
+$btn-border-width: 0.1rem !default;
+$btn-border-style: solid !default;
+$btn-border-color: color.adjust($btn-background, $darkness 50%) !default;
+$btn-border-radius: $border-radius !default;
+$btn-text-transform: none !default;
+
+// Muted Buttons
+$btn-muted-accent: $grey-light !default;
+$btn-muted-border: 1px solid $grey-light !default;
+$btn-muted-border-hover: 1px solid color.adjust($btn-muted-accent, $darkness 30%) !default;
+$btn-muted-background: transparent !default;
+$btn-muted-background-hover: transparent !default;
+$btn-muted-color: color.adjust($btn-muted-accent, $darkness  50%) !default;
+$btn-muted-color-hover: color.adjust($btn-muted-accent, $darkness 50%) !default;
+
+// Round Buttons
+$btn-round: 45px !default;
+
+// Main button styling
+%buttons {
+  appearance: none;
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: $btn-text-transform;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
+  box-sizing: border-box;
+  border: $btn-border-width $btn-border-style $btn-border-color;
+  border-radius: $btn-border-radius;
+  background: $btn-background;
+  color: $btn-color;
+  font-weight: $btn-font-weight;
+
+  /* font-family: $btn-font-family; */
+  font-family: inherit;
+  font-size: $btn-font-size;
+  padding: 0.75rem 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+%buttons-hover {
+  border: $btn-border-width $btn-border-style color.adjust($btn-border-color, $darkness  10%);
+  background: $btn-background-hover;
+  color: $btn-color;
+  text-decoration: none;
+}
+
+// Buttons on focus
+%buttons-focus {
+  border: $btn-border-width $btn-border-style color.adjust($btn-border-color, $darkness 10%);
+  background: color.adjust($btn-background, $darkness  10%);
+  color: $btn-color;
+  text-decoration: none;
+}
+
+// Apply styles to .button class, button element, and button-based inputs
+#{$btn} {
+  @extend %buttons;
+
+  &--muted {
+    background: $btn-muted-background;
+    border: $btn-muted-border;
+    color: $btn-muted-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $btn-muted-color-hover;
+      border: $btn-muted-border-hover;
+      background: $btn-muted-background-hover;
+    }
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  &:hover {
+    @extend %buttons-hover;
+  }
+
+  &:focus,
+  &:active {
+    @extend %buttons-focus;
+  }
+}
+
+// Round buttons
+.btn-round,
+a.btn-round {
+  border-radius: $btn-round;
+}
+
+// Square buttons
+.btn-square,
+a.btn-square {
+  border-radius: 0;
+}
+
+// Full width buttons (block level)
+.btn-full,
+a.btn-full {
+  display: block;
+  width: 100%;
+}
