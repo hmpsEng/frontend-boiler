@@ -1,3 +1,8 @@
+/* stylelint-disable scss/dollar-variable-empty-line-before */
+/* stylelint-disable declaration-bang-space-before */
+/* stylelint-disable indentation */
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+
 /* TYPOGRAPHY
 
                  Email: hampus.engblom@gmail.com
@@ -23,13 +28,12 @@
    /* ! */
    $line-height-base:                       1                  !default;
 
-
 /* ----------------------------------------------------------------------------
     font-style as var.  fallbacks..
   -------------------------------------------------------------------------- */
     $sans-serif:
     /* 	OS X (10.11+), iOS (9+)           */ -apple-system,
-    /*  BlinkMacSystemFont 	OS X, Chrome  */ BlinkMacSystemFont,
+    /*  BlinkMacSystemFont 	OS X, Chrome  */ "blinkMacSystemFont",
     /*  Windows                           */ "Segoe UI",
     /*  Android 4.0+                      */ "Roboto",
     /*  Linux, KDE                        */ "Oxygen",
@@ -65,12 +69,10 @@
     /*                                    */ !default;
 
     $serif:
-    /*                                    */ Georgia, Times, "Times New Roman",
+    /*                                    */ georgia, times, "Times New Roman",
     /* Fallback                           */ serif,
     /*                                    */
     /*                                    */ !default;
-
-
 
 html,
 button,
