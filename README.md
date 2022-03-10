@@ -1,4 +1,4 @@
 # frontend-boiler
 
 friendly
-web dev
+web develop with shitty friends
