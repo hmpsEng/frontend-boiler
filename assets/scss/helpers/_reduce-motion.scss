@@ -1,0 +1,21 @@
+@media (prefers-reduced-motion: reduce) {
+  /* all opinionated */
+  *,
+  ::before,
+  ::after {
+    /* Remove animations when motion is reduced */
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+
+    /* Remove fixed background attachments when motion is reduced  */
+    background-attachment: initial !important;
+
+    /* Remove timed scrolling behaviors when motion is reduced  */
+    scroll-behavior: auto !important;
+
+    /* Remove transitions when motion is reduced  */
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
