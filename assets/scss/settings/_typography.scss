@@ -3,95 +3,88 @@
 /* stylelint-disable indentation */
 /* stylelint-disable scss/dollar-variable-colon-space-after */
 
+@use "sass:map";
+@use "sass:math";
+
 /* TYPOGRAPHY
 
                  Email: hampus.engblom@gmail.com
 
--------------------------------------------------------------------------------
-  DETAILS:
-
-    temp
-
 ---------------------------------------------------------------------------- */
 
-/* ----------------------------------------------------------------------------
-   *-base, reset like
-   ------------------------------------------------------------------------- */
-
-   $font-color-base:                      #404040            !default;
-   $font-size-base:                         16px               !default;
-   $font-style-base:                        normal             !default;
-   $font-variant-base:                      normal             !default;
-   $font-weight-base:                       normal             !default;
-   $font-family-base:                       $sans-serif        !default;
-
-   /* ! */
-   $line-height-base:                       1                  !default;
-
-/* ----------------------------------------------------------------------------
-    font-style as var.  fallbacks..
+/* size
   -------------------------------------------------------------------------- */
-    $sans-serif:
-    /* 	OS X (10.11+), iOS (9+)           */ -apple-system,
-    /*  BlinkMacSystemFont 	OS X, Chrome  */ "blinkMacSystemFont",
-    /*  Windows                           */ "Segoe UI",
-    /*  Android 4.0+                      */ "Roboto",
-    /*  Linux, KDE                        */ "Oxygen",
-    /*  Linux, Ubuntu                     */ "Ubuntu",
-    /*  Linux, GNOME                      */ "Cantarell",
-    /*  Firefox OS                        */ "Fira Sans",
-    /*  Android (until 3.2)               */ "Droid Sans",
-    /*  OS X (10.9)                       */ "Helvetica Neue",
-    /*  Fallback                          */ sans-serif,
-    /*                                    */
-    /*  macOS emoji                       */ "Apple Color Emoji",
-    /*  Windows emoji                     */ "Segoe UI Emoji",
-    /*  Windows emoji                     */ "Segoe UI Symbol",
-    /*  Linux emoji                       */ "Noto Color Emoji",
-    /*                                    */
-    /*                                    */ !default;
+  $font-size-base:                         1rem               !default;
+  $font-size-ratio:                        1.333              !default;
 
-    $monospace:
-    /*  macOS 10.10+                      */ "Menlo",
-    /*  Windows                           */ "Consolas",
-    /*  Android 4+                        */ "Roboto Mono",
-    /*  Ubuntu 10.10+                     */ "Ubuntu Monospace",
-    /*  KDE Plasma 5+                     */ "Noto Mono",
-    /*  KDE Plasma 4+                     */ "Oxygen Mono",
-    /*  Linux/OpenOffice fallback         */ "Liberation Mono",
-    /*  fallback                          */ monospace,
-    /*                                    */
-    /*  macOS emoji                       */ "Apple Color Emoji",
-    /*  Windows emoji                     */ "Segoe UI Emoji",
-    /*  Windows emoji                     */ "Segoe UI Symbol",
-    /*  Linux emoji                       */ "Noto Color Emoji",
-    /*                                    */
-    /*                                    */ !default;
+  $font-sizes: ()                                             !default;
+  $font-sizes: map.merge(
+    (
+      h1: math.pow($font-size-ratio, 4) * $font-size-base,
+      h2: math.pow($font-size-ratio, 3) * $font-size-base,
+      h3: math.pow($font-size-ratio, 2) * $font-size-base,
+      h4: math.pow($font-size-ratio, 1) * $font-size-base,
+      h5: $font-size-base,
+      h6: $font-size-base
+    ),
+    $font-sizes
+  );
 
-    $serif:
-    /*                                    */ georgia, times, "Times New Roman",
-    /* Fallback                           */ serif,
-    /*                                    */
-    /*                                    */ !default;
+/* style
+  -------------------------------------------------------------------------- */
+  $line-height-base:                       1.2                !default;
+  $font-style-base:                        normal             !default;
+  $font-variant-base:                      normal             !default;
+  $font-weight-base:                       normal             !default;
+  $line-height-heading:                    1.8                !default;
+  $font-weight-heading:                    700                !default;
 
-html,
-button,
-input,
-select,
-textarea {
-  color: $font-color-base;
-}
+/* font-style as var,
+  -------------------------------------------------------------------------- */
+  $sans-serif:
+  /* 	OS X (10.11+), iOS (9+)           */ -apple-system,
+  /*  BlinkMacSystemFont 	OS X, Chrome  */ "blinkMacSystemFont",
+  /*  Windows                           */ "Segoe UI",
+  /*  Android 4.0+                      */ "Roboto",
+  /*  Linux, KDE                        */ "Oxygen",
+  /*  Linux, Ubuntu                     */ "Ubuntu",
+  /*  Linux, GNOME                      */ "Cantarell",
+  /*  Firefox OS                        */ "Fira Sans",
+  /*  Android (until 3.2)               */ "Droid Sans",
+  /*  OS X (10.9)                       */ "Helvetica Neue",
+  /*  Fallback                          */ sans-serif,
+  /*                                    */
+  /*  macOS emoji                       */ "Apple Color Emoji",
+  /*  Windows emoji                     */ "Segoe UI Emoji",
+  /*  Windows emoji                     */ "Segoe UI Symbol",
+  /*  Linux emoji                       */ "Noto Color Emoji",
+  /*                                    */
+  /*                                    */ !default;
 
-i,
-em {
-  font-style: italic;
-}
+  $monospace:
+  /*  macOS 10.10+                      */ "Menlo",
+  /*  Windows                           */ "Consolas",
+  /*  Android 4+                        */ "Roboto Mono",
+  /*  Ubuntu 10.10+                     */ "Ubuntu Monospace",
+  /*  KDE Plasma 5+                     */ "Noto Mono",
+  /*  KDE Plasma 4+                     */ "Oxygen Mono",
+  /*  Linux/OpenOffice fallback         */ "Liberation Mono",
+  /*  fallback                          */ monospace,
+  /*                                    */
+  /*  macOS emoji                       */ "Apple Color Emoji",
+  /*  Windows emoji                     */ "Segoe UI Emoji",
+  /*  Windows emoji                     */ "Segoe UI Symbol",
+  /*  Linux emoji                       */ "Noto Color Emoji",
+  /*                                    */
+  /*                                    */ !default;
 
-b,
-strong {
-  font-weight: bold;
-}
+  $serif:
+  /*                                    */ georgia, times, "Times New Roman",
+  /* Fallback                           */ serif,
+  /*                                    */
+  /*                                    */ !default;
 
-.br {
-  display: block;
-}
+/*
+  -------------------------------------------------------------------------- */
+  $font-family-base:                       $sans-serif        !default;
+  $font-family-heading:                    $font-family-base  !default;

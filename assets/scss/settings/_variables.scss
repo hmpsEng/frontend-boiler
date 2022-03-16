@@ -1,0 +1,48 @@
+/* stylelint-disable declaration-bang-space-before */
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+/* stylelint-disable indentation */
+
+/** GLOBAL VARIABLES
+  * ======================================================================== */
+
+$mobile-header-height: 4em;
+
+/** Breakpoints / Containers
+  * ======================================================================== */
+    $mq-xs:                    20rem  !default; // 320px
+    $mq-sm:                    36rem  !default; // 576px
+    $mq-md:                    48rem  !default; // 768px
+    $mq-lg:                    62rem  !default; // 992px
+    $mq-xl:                    75rem  !default; // 1200px
+    $mq-xxl:                   100rem !default; // 1800px
+
+/** ANIMATIONS
+  * ===========================================================================
+  */
+    $animation-duration:      200ms                                 !default;
+    $animation-easing:        ease-in-out                           !default;
+    $animation-normal:        $animation-duration $animation-easing !default;
+
+/** ICON
+  * ===========================================================================
+  */
+
+/** ICON SIZES
+  * ---------------------------------------------------------------------------
+  */
+
+/** ICON LIST
+  * ---------------------------------------------------------------------------
+  */
+
+/** BOX SHADOW
+  * ===========================================================================
+  */
+
+/** FOOTER
+  * ===========================================================================
+  */
+
+/** HEADER
+  * ===========================================================================
+  */

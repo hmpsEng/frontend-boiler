@@ -1,6 +1,7 @@
 /* stylelint-disable max-empty-lines */
 /* stylelint-disable scss/at-mixin-pattern */
 
+@use "../../settings/" as *;
 
 /** MEDIA QUERIES
   * ===========================================================================
@@ -8,7 +9,7 @@
   */
 
 /** xs-only, 0 to ~20rem/320px */
-@mixin mq-xs-only {
+@mixin mq--xs-only {
   @media only screen and (max-width: 319.98px) {
     @content;
   }
