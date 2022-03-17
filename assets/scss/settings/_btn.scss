@@ -1,0 +1,174 @@
+/* btn
+
+                 Email: hampus.engblom@gmail.com
+
+---------------------------------------------------------------------------- */
+
+/* btn
+cursor: pointer;
+user-select: none;
+box-sizing: border-box;
+appearance: none;
+display: inline-block;
+vertical-align: middle;
+justify-content: center;
+-webkit-user-drag: none;
+line-height: normal; */
+
+/* color
+btn-background
+btn-background-hover
+btn-color: $font-color-base !default
+btn-border-color */
+
+/* muted btn
+color muted
+btn-muted-accent
+btn-muted-border
+btn-muted-border-hover
+btn-muted-background
+btn-muted-background-hover
+btn-muted-color
+btn-muted-color-hover */
+
+/* text style
+text-align: center;
+text-decoration: none; */
+$btn-text-transform: none !default;
+
+// font
+$btn-font-weight: 500 !default;
+$btn-font-family: $font-family-base !default;
+$btn-font-style: default !default;
+$btn-font-size: $font-size-base !default;
+
+// border
+$btn-border-radius: $border-radius !default;
+$btn-border-width: 0.1rem !default;
+$btn-border-style: solid !default;
+
+// margin and pappding
+$button-padding: 0.85em 1em !default;
+$button-margin: 0 0 0.5rem 0 !default;
+
+// Round Buttons
+$btn-round: 45px !default;
+
+// Main button styling
+%buttons {
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  justify-content: center;
+  -webkit-user-drag: none;
+  line-height: normal;
+  color: $btn-color;
+  background: $btn-background;
+  border: $btn-border-width $btn-border-style $btn-border-color;
+  border-radius: $btn-border-radius;
+  text-align: center;
+  text-decoration: none;
+  text-transform: $btn-text-transform;
+  font-weight: $btn-font-weight;
+  font-family: $btn-font-family;
+  font-style: $btn-font-style;
+  font-size: $btn-font-size;
+  padding: $button-padding;
+  margin: $button-margin;
+}
+
+// on focus
+%buttons-hover {
+  border: $btn-border-width $btn-border-style color.adjust($btn-border-color, $darkness  10%);
+  background: $btn-background-hover;
+  color: $btn-color;
+  text-decoration: none;
+}
+
+// on focus
+%buttons-focus {
+  border: $btn-border-width $btn-border-style color.adjust($btn-border-color, $darkness 10%);
+  background: color.adjust($btn-background, $darkness  10%);
+  color: $btn-color;
+  text-decoration: none;
+}
+
+// Apply styles to .button class, button element, and button-based inputs
+#{$btn} {
+  @extend %buttons;
+
+  &--muted {
+    background: btn-muted-background;
+    border: btn-muted-border;
+    color: btn-muted-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: btn-muted-color-hover;
+      border: btn-muted-border-hover;
+      background: btn-muted-background-hover;
+    }
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  &:visited {
+    color: $btn-color;
+  }
+
+  &:hover {
+    @extend %buttons-hover;
+  }
+
+  &:focus,
+  &:active {
+    @extend %buttons-focus;
+  }
+
+  &:active,
+  &[aria-pressed="true"],
+  &[aria-selected="true"],
+  &[aria-expanded="true"] {
+    background-color: $button-active-background-color;
+    border-color: $button-active-border-color;
+    transition-duration: 0s;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    &:active,
+    &[aria-pressed="true"],
+    &[aria-selected="true"],
+    &[aria-expanded="true"],
+    &:hover {
+      background-color: $button-disabled-background-color;
+      border-color: $button-disabled-border-color;
+    }
+  }
+}
+
+// Round buttons
+.btn-round,
+a.btn-round {
+  border-radius: $btn-round;
+}
+
+// Square buttons
+.btn-square,
+a.btn-square {
+  border-radius: 0;
+}
+
+// Full width buttons (block level)
+.btn-full,
+a.btn-full {
+  display: block;
+  width: 100%;
+}
