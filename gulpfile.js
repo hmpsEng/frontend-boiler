@@ -39,6 +39,7 @@ gulp.task("build:dist", () => {
     .pipe(dest('website/dist'));
 });
 
+// Generate optimized images files
 // gulp.task("build:images", function () {
 //   return src(['website/src/img/src/**/*'])
 //     .pipe(changed('website/dist/img/dist'))
