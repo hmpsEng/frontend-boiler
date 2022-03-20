@@ -1,0 +1,40 @@
+/** #TABLE
+  * ---------------------------------------------------------------------------
+  ** ...
+  * - ...
+  * #table
+  * #table__header
+  * #table__header-cell
+  * #table__row
+  * #table__cell
+  * #table__footer
+  * #table__footer-cell
+  */
+
+.c-table {
+  margin-bottom: 1rem;
+
+  &__header {
+    background: lightgray;
+  }
+
+  &__header-cell {
+    padding: 0.8rem;
+  }
+
+  &__row {
+    border-bottom: 1px solid lightgray;
+  }
+
+  &__cell {
+    padding: 1.6rem 0.8rem;
+  }
+
+  &__footer {
+    padding: 0.8rem;
+  }
+
+  &__footer-cell {
+    padding: 0.8rem;
+  }
+}

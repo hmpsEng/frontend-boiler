@@ -1,0 +1,25 @@
+/** #FOOTER NAV
+  * ---------------------------------------------------------------------------
+  ** ?
+  * - navigation within the footer
+  * #footer-nav
+  * #footer-nav__link
+  *
+  */
+
+/** #footer-nav ------------------------------------------------------------ */
+.c-footer-nav {
+  display: flex;
+
+  /** #footer-nav__link ---------------------------------------------------- */
+  &__link {
+    display: block;
+    padding: 1rem 1rem 0.5rem;
+    line-height: 1;
+
+    &:hover,
+    &:focus {
+      /* link hover color */
+    }
+  }
+}

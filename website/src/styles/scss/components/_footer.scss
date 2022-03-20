@@ -1,0 +1,49 @@
+/** #FOOTER
+  * ---------------------------------------------------------------------------
+  ** global block component
+  * - bottom of each page. may contain navigation, contact, social, legal info
+  * #footer
+  * #footer__main
+  * #footer__social
+  * #footer__legal
+  *
+  */
+
+/** #footer ---------------------------------------------------------------- */
+.c-footer {
+  text-align: center;
+  display: flex;
+  flex-shrink: 0;
+  border-top: 1px solid gray;
+  margin-top: 1rem;
+
+  /** #footer__main -------------------------------------------------------- */
+  &__main {
+    margin-bottom: 0;
+
+    /*
+    *
+    *
+    */
+  }
+
+  /** #footer__social------------------------------------------------------- */
+  &__social {
+    margin-bottom: 0;
+
+    /*
+    *
+    *
+    */
+  }
+
+  /** #footer__legal ------------------------------------------------------- */
+  &__leagal {
+    margin-bottom: 0;
+
+    /*
+    *
+    *
+    */
+  }
+}
