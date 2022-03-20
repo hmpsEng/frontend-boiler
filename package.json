@@ -1,0 +1,30 @@
+{
+  "name": "webdev-frontend-boiler",
+  "version": "1.0.0",
+  "description": "friendships lost",
+  "main": "",
+  "directories": {
+    "website": "website",
+    "src": "website/src",
+    "dist": "website/src"
+  },
+  "scripts": {
+    "test": "later"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmpsEng/frontend-boiler.git"
+  },
+  "keywords": [
+    "sad"
+  ],
+  "author": "me",
+  "license": "plz",
+  "bugs": {
+    "url": "https://github.com/hmpsEng/frontend-boiler/issues"
+  },
+  "homepage": "https://github.com/hmpsEng/frontend-boiler#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
