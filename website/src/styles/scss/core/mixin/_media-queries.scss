@@ -1,0 +1,93 @@
+/* stylelint-disable max-empty-lines */
+/* stylelint-disable scss/at-mixin-pattern */
+
+@use "../../settings/" as *;
+
+/** MEDIA QUERIES
+  * ===========================================================================
+  * Breakpoints to fuck up in a responsive way
+  */
+
+/** xs-only, 0 to ~20rem/320px */
+@mixin mq--xs-only {
+  @media only screen and (max-width: 319.98px) {
+    @content;
+  }
+}
+
+/** xs, break on 20rem/320px */
+@mixin mq--xs {
+  @media screen and (min-width: #{$mq-xs}) {
+    @content;
+  }
+}
+
+/** sm-only, 20rem/320px to ~36rem/575.98px */
+@mixin mq--sm-only {
+  @media only screen and (min-width: #{$mq-xs}) and (max-width: 575.98px) {
+    @content;
+  }
+}
+
+/** sm, break on 36rem/576px */
+@mixin mq--sm {
+  @media only screen and (min-width: #{$mq-sm}) {
+    @content;
+  }
+}
+
+/** md-only,  36rem/576px to ~48rem/767.98px */
+@mixin mq--md-only {
+  @media only screen and (min-width: #{$mq-sm}) and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+/** md, break on 48rem/768px */
+@mixin mq--md {
+  @media screen and (min-width: #{$mq-md}) {
+    @content;
+  }
+}
+
+/** lg-only, 48rem/768px to ~62rem/991.98px */
+@mixin mq--lg-only {
+  @media only screen and (min-width: #{$mq-md}) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+/** lg, break on 62rem/992px */
+@mixin mq--lg {
+  @media screen and (min-width: #{$mq-lg}) {
+    @content;
+  }
+}
+
+/** xl-only ( 62rem/992px , ~75rem/1198.98px ) */
+@mixin mq--xl-only {
+  @media only screen and (min-width: #{$mq-lg})  and (max-width: 1198.98px) {
+    @content;
+  }
+}
+
+/** xl, break on 75rem/1200px */
+@mixin mq--xl {
+  @media screen and (min-width: #{$mq-xl}) {
+    @content;
+  }
+}
+
+/** xxl-only ( 75rem/1200px , 100rem/1800px ) */
+@mixin mq--xxl-only {
+  @media only screen and (min-width: #{$mq-xl}) and (max-width: #{$mq-xxl}) {
+    @content;
+  }
+}
+
+/** Break on variable ( min , max ) */
+@mixin mq--responsive($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
