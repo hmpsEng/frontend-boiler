@@ -3,3 +3,4 @@ node_modules/*
 test/*
 assets/*
 topbtn.js
+website/src/styles/scss/_shame/*
