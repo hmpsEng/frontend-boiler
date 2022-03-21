@@ -13,9 +13,9 @@
 .c-footer {
   text-align: center;
   display: flex;
+  flex-flow: nowrap;
+  flex-direction: column;
   flex-shrink: 0;
-  border-top: 1px solid gray;
-  margin-top: 1rem;
 
   /** #footer__main -------------------------------------------------------- */
   &__main {
@@ -40,6 +40,7 @@
   /** #footer__legal ------------------------------------------------------- */
   &__leagal {
     margin-bottom: 0;
+    border-top: 0.1rem solid gray;
 
     /*
     *
