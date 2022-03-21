@@ -4,9 +4,11 @@
   "description": "friendships lost",
   "main": "",
   "directories": {
+    "docs": "docs",
+    "gulp": "website",
     "website": "website",
     "src": "website/src",
-    "dist": "website/src"
+    "dist": "website/dist"
   },
   "scripts": {
     "test": "later"
@@ -30,6 +32,8 @@
     "gulp-changed": "^4.0.3",
     "gulp-clean-css": "^4.3.0",
     "gulp-imagemin": "^8.0.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-uglify-es": "^3.0.0"
   }
