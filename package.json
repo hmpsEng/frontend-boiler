@@ -11,7 +11,7 @@
     "dist": "website/dist"
   },
   "scripts": {
-    "test": "later"
+    "test": ""
   },
   "repository": {
     "type": "git",
