@@ -4,11 +4,11 @@
 # #ignored
 # -----------------------------------------------------------------------------
 
-_shame/
-assets/
-docs/
-test/
-website/dist/
+_shame
+assets
+docs
+test
+
 
 
 # #ignored
