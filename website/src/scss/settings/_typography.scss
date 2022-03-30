@@ -1,0 +1,112 @@
+/* stylelint-disable scss/dollar-variable-empty-line-before */
+/* stylelint-disable declaration-bang-space-before */
+/* stylelint-disable indentation */
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+
+@use "sass:math";
+@use "sass:map";
+
+/* TYPOGRAPHY
+
+                 Email: hampus.engblom@gmail.com
+
+---------------------------------------------------------------------------- */
+
+/** size ------------------------------------------------------------------- */
+
+/* importante */
+  $font-size-ratio:                        1.333              !default;
+  $font-size-root:                         null               !default;
+  $font-size-base:                         1rem               !default;
+
+  /* .. */
+  $font-size-small:                        0.875em            !default;
+  $font-size-code:                         $font-size-small   !default;
+  $font-size-blockquote: $font-size-base * 1.25               !default;
+  $font-size-blockquote-footer:            $font-size-small   !default;
+
+/** style ------------------------------------------------------------------ */
+  $font-style-base:                        normal             !default;
+  $font-variant-base:                      normal             !default;
+  $font-weight-base:                       normal             !default;
+
+  /* line-height */
+  $line-height-base:                       1.5                !default;
+
+  /* headings */
+  $line-height-headings:                   1.2                !default;
+
+  /* $headings-margin-bottom:                                 !default; */
+  $font-weight-headings:                   500                !default;
+  $font-family-headings:                   null               !default;
+  $font-style-headings:                    null               !default;
+  $font-color-headings:                    null               !default;
+
+  $font-size-h1: math.pow($font-size-ratio, 4) * $font-size-base !default;
+  $font-size-h2: math.pow($font-size-ratio, 3) * $font-size-base !default;
+  $font-size-h3: math.pow($font-size-ratio, 2) * $font-size-base !default;
+  $font-size-h4: math.pow($font-size-ratio, 1) * $font-size-base !default;
+  $font-size-h5:                                 $font-size-base !default;
+  $font-size-h6:                                 $font-size-base !default;
+
+  $font-sizes: (
+    h1: $font-size-h1,
+    h2: $font-size-h2,
+    h3: $font-size-h3,
+    h4: $font-size-h4,
+    h5: $font-size-h5,
+    h6: $font-size-h6
+  ) !default;
+
+/* font-style var
+  -------------------------------------------------------------------------- */
+  $sans-serif:
+  /* 	OS X (10.11+), iOS (9+)           */ -apple-system,
+  /*  BlinkMacSystemFont 	OS X, Chrome  */ "blinkMacSystemFont",
+  /*  Windows                           */ "Segoe UI",
+  /*  Android 4.0+                      */ "Roboto",
+  /*  Linux, KDE                        */ "Oxygen",
+  /*  Linux, Ubuntu                     */ "Ubuntu",
+  /*  Linux, GNOME                      */ "Cantarell",
+  /*  Firefox OS                        */ "Fira Sans",
+  /*  Android (until 3.2)               */ "Droid Sans",
+  /*  OS X (10.9)                       */ "Helvetica Neue",
+  /*  Fallback                          */ sans-serif,
+  /*                                    */
+  /*  macOS emoji                       */ "Apple Color Emoji",
+  /*  Windows emoji                     */ "Segoe UI Emoji",
+  /*  Windows emoji                     */ "Segoe UI Symbol",
+  /*  Linux emoji                       */ "Noto Color Emoji",
+  /*                                    */
+  /*                                    */ !default;
+
+  $monospace:
+  /*  macOS 10.10+                      */ "Menlo",
+  /*  Windows                           */ "Consolas",
+  /*  Android 4+                        */ "Roboto Mono",
+  /*  Ubuntu 10.10+                     */ "Ubuntu Monospace",
+  /*  KDE Plasma 5+                     */ "Noto Mono",
+  /*  KDE Plasma 4+                     */ "Oxygen Mono",
+  /*  Linux/OpenOffice fallback         */ "Liberation Mono",
+  /*  fallback                          */ monospace,
+  /*                                    */
+  /*  macOS emoji                       */ "Apple Color Emoji",
+  /*  Windows emoji                     */ "Segoe UI Emoji",
+  /*  Windows emoji                     */ "Segoe UI Symbol",
+  /*  Linux emoji                       */ "Noto Color Emoji",
+  /*                                    */
+  /*                                    */ !default;
+
+  $serif:
+  /*                                    */ georgia, times, "Times New Roman",
+  /*                                    */ serif,
+  /*                                    */
+  /*                                    */ !default;
+
+/*
+  -------------------------------------------------------------------------- */
+  $font-family-base:                       $sans-serif        !default;
+  $font-family-code:                       $monospace         !default;
+
+  $code-color:                             pink             !default;
+  $pre-color:                               null              !default;

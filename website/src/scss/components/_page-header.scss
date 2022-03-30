@@ -1,0 +1,34 @@
+/** #PAGE HEADER
+  * ---------------------------------------------------------------------------
+  ** block component
+  * - headlines, description text
+  * #page-header
+  * #page-header__title
+  * #page-header__desc
+  *
+  */
+
+/** #page-header ----------------------------------------------------------- */
+.c-page-header {
+  display: block;
+
+  /** #page-header__title -------------------------------------------------- */
+  &__title {
+    margin-bottom: 0;
+
+    /*
+    *
+    *
+    */
+  }
+
+  /** #page-header__desc --------------------------------------------------- */
+  &__desc {
+    margin-bottom: 0;
+
+    /*
+    *
+    *
+    */
+  }
+}

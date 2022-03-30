@@ -1,0 +1,58 @@
+/** #BREADCRUMBS
+  * ---------------------------------------------------------------------------
+  ** breadcrumbs list
+  * - ordered list showing what level you are on in the site
+  * #breadcrumbs
+  * #breadcrumbs__item
+  * #breadcrumbs__item ::hover
+  ** not(:first-of-type)::before
+  * - to remove " / "
+  * #breadcrumbs__item ::before
+  * #breadcrumbs__link--selected
+  */
+
+/** #breadcrumbs ----------------------------------------------------------- */
+.c-breadcrumbs {
+  display: block;
+  padding: 1rem;
+  background-color: rgba(#000, 0.03);
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+    cursor: pointer;
+
+    /** #breadcrumbs__item ::hover ----------------------------------------- */
+    &:hover {
+      text-decoration: underline;
+    }
+
+    /** #breadcrumbs__item ::before ---------------------------------------- */
+    &:not(:first-of-type)::before {
+      content: "/";
+      font-weight: bold;
+      margin: 0 0.5rem;
+    }
+
+    &--selected {
+      cursor: default;
+      font-weight: normal;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* Breadcrumbs link within first breadcrumb item
+.c-breadcrumbs__link {
+  margin: 0 0.5rem;
+  .c-breadcrumbs__item:first-child & {
+    margin-left: 0;
+  }
+}
+*/

@@ -1,21 +1,21 @@
 {
-  "name": "webdev-frontend-boiler",
+  "name": "webdev-frontend",
   "version": "1.0.0",
   "description": "friendships lost",
-  "main": "",
-  "directories": {
-    "docs": "docs",
-    "gulp": "website",
-    "website": "website",
-    "src": "website/src",
-    "dist": "website/dist"
-  },
+  "main": "gulpfile.babel.js",
   "scripts": {
-    "test": ""
+    "build:dev": "gulp build",
+    "build:prod": "gulp build --prod",
+    "rebuild:dev": "gulp rebuild",
+    "rebuild:prod": "gulp rebuild --prod",
+    "deploy:dev": "gulp deploy",
+    "deploy:prod": "gulp deploy --prod",
+    "redeploy:dev": "gulp rebuild",
+    "redeploy:prod": "gulp rebuild --prod"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hmpsEng/frontend-boiler.git"
+    "url": "git+https://github.com/hmpush/webdev-frontend.git"
   },
   "keywords": [
     "sad"
@@ -23,18 +23,35 @@
   "author": "me",
   "license": "plz",
   "bugs": {
-    "url": "https://github.com/hmpsEng/frontend-boiler/issues"
+    "url": "https://github.com/hmpush/webdev-frontend/issues"
   },
-  "homepage": "https://github.com/hmpsEng/frontend-boiler#readme",
+  "homepage": "https://github.com/hmpush/webdev-frontend/#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.7",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.27.9",
+    "browserify": "^17.0.0",
     "del": "^6.0.0",
+    "event-stream": "^4.0.1",
     "gulp": "^4.0.2",
-    "gulp-changed": "^4.0.3",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
-    "gulp-imagemin": "^8.0.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-if": "^3.0.0",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
-    "gulp-uglify-es": "^3.0.0"
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "jshint": "^2.13.4",
+    "sass": "^1.49.9",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
