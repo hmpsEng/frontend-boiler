@@ -13,7 +13,7 @@ const config = {
     ],
     css: `${srcFolder}/css/`,
     styles: [
-      `${srcFolder}/scss/style.scss`,
+      `${srcFolder}/style/scss/style.scss`,
     ],
     html: `${srcFolder}/*.html`,
     img: `${srcFolder}/img`,
@@ -31,7 +31,7 @@ const config = {
   },
   watch: {
     scripts: `${srcFolder}/js/**/*.js`,
-    styles: `${srcFolder}/scss/**/*.scss`,
+    styles: `${srcFolder}/style/scss/**/*.scss`,
     homepage: [
       `${srcFolder}/index.html`,
       `${srcFolder}/html/layout/**/*.html`,
