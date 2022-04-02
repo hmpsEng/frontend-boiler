@@ -1,0 +1,71 @@
+/** #CARD
+  * ---------------------------------------------------------------------------
+  ** block of media
+  * - a body of text in a vertical format
+  * #card
+  * #card__header
+  * #card__body
+  * #card__title
+  * #card__text
+  * #card__footer
+  ** Actions
+  * - container for links and buttons within a card
+  * #card__actions
+  * #card__icon
+  */
+
+/** #card ------------------------------------------------------------------ */
+.c-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  position: relative;
+  padding: 1.5rem 1rem 1rem;
+
+  /** #card__header--------------------------------------------------------- */
+  &__header {
+    margin: -1.5rem -1rem 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  /** #card__body ---------------------------------------------------------- */
+  &__body {
+    flex: 1 0 auto;
+  }
+
+  /** #card__title --------------------------------------------------------- */
+  &__title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  /** #card__text----------------------------------------------------------- */
+  &__text {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  /** #card__footer -------------------------------------------------------- */
+  &__footer {
+    margin: 1rem -1rem -1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  /** #card__actions ------------------------------------------------------- */
+  &__actions {
+    margin-top: 1rem;
+  }
+
+  /** #card____icon -------------------------------------------------------- */
+  &__icon {
+    margin-left: auto;
+
+    /* Card icon on card hover */
+    .c-card:hover &,
+    .c-card:focus & {
+      transform: translate(3px);
+    }
+  }
+}

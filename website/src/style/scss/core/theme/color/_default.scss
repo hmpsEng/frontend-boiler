@@ -1,0 +1,6 @@
+@use "../../../support" as *;
+@import "../../../../primitives";
+
+@include color-mode {
+  @include colors-default;
+}

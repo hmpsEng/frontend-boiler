@@ -1,0 +1,87 @@
+/** #HEADER
+  * ---------------------------------------------------------------------------
+  ** global block component
+  * -  top of page containing, navigation, logo, ...
+  * #header
+  *
+  */
+
+/** unclear if full dropdow will be right here
+  * to be continued
+  */
+.c-header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 6;
+
+  &-base {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+
+    &__nav-btn {
+      padding: 2rem;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    &--w-open-menu {
+      &::after {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        content: "";
+        height: 0.1rem;
+        display: block;
+        background: rgb(255 255 255 / 10%);
+      }
+    }
+  }
+
+  &-menu {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    opacity: 0;
+
+    &--active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    &__content {
+      position: relative;
+      flex: 1 1 auto;
+      overflow: hidden;
+    }
+
+    &__footer {
+      position: relative;
+      flex: 0 0 auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        content: "";
+        height: 0.1rem;
+        display: block;
+        background: rgb(255 255 255 / 10%);
+      }
+    }
+  }
+}

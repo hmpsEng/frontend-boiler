@@ -1,0 +1,49 @@
+@use "../../support" as *;
+
+%container {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  @extend %container;
+
+  max-width: $mq-xxl;
+
+  &-xs {
+    @extend %container;
+
+    max-width: $mq-xs;
+  }
+
+  &-sm {
+    @extend %container;
+
+    max-width: $mq-sm;
+  }
+
+  &-md {
+    @extend %container;
+
+    max-width: $mq-md;
+  }
+
+  &-lg {
+    @extend %container;
+
+    max-width: $mq-lg;
+  }
+
+  &-xl {
+    @extend %container;
+
+    max-width: $mq-xl;
+  }
+
+  &-xxl {
+    @extend %container;
+
+    max-width: $mq-xxl;
+  }
+}

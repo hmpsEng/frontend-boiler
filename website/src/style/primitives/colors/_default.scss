@@ -1,0 +1,42 @@
+/* stylelint-disable declaration-colon-space-after */
+@mixin colors-default {
+  & {
+    // ------------------------------------------------------------------------
+    --color-text-default:                 hsl(213deg 13% 16%);
+    --color-text-muted:                   hsl(212deg 10% 38%);
+    --color-bg-default:                   hsl(0deg 0% 95%);
+
+    // #border ----------------------------------------------------------------
+    --color-border-default:               hsl(210deg 18% 84%);
+    --color-border-muted:                 hsl(210deg 18% 87% / 100%);
+
+    // #header ----------------------------------------------------------------
+    --color-header-text:                  rgb(255 255 255 / 70%);
+    --color-header-bg:                    hsl(213deg 13% 16%);
+    --color-header-logo:                  hsl(0deg 0% 100%);
+
+    // #btn -------------------------------------------------------------------
+    --color-btn-text:                     hsl(213deg 13% 16%);
+    --color-btn-bg:                       hsl(210deg 29% 97%);
+
+    // #commonm -------------------------------------------------------------------
+    --color-success-default:              hsl(150deg 100% 33%);
+    --color-success-muted:                hsl(137deg 50% 53% / 40%);
+    --color-danger-default:               hsl(4deg 81% 65%);
+    --color-danger-muted:                 hsl(360deg 100% 75% / 40%);
+    --color-attention-default:            hsl(42deg 96% 65%);
+    --color-attention-muted:              rgb(204 181 112 / 78.8%);
+
+    // a
+
+    --color-gray-100:                     hsl(0deg 0% 98%);
+    --color-gray-200:                     hsl(240deg 5% 92%);
+    --color-gray-300:                     hsl(240deg 4% 86%);
+    --color-gray-400:                     hsl(240deg 5% 67%);
+    --color-gray-500:                     hsl(240deg 4% 48%);
+    --color-gray-600:                     hsl(240deg 5% 35%);
+    --color-gray-700:                     hsl(240deg 5% 28%);
+    --color-gray-800:                     hsl(240deg 4% 18%);
+    --color-gray-900:                     hsl(240deg 5% 12%);
+  }
+}

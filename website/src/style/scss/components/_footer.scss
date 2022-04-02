@@ -1,0 +1,70 @@
+/** #FOOTER
+  * ---------------------------------------------------------------------------
+  ** global block component
+  * - bottom of each page. may contain navigation, contact, social, legal info
+  * #footer
+  * #footer__main
+  * #footer__social
+  * #footer__legal
+  *
+  */
+
+/** #footer ---------------------------------------------------------------- */
+.c-footer {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  flex-shrink: 0;
+
+  /** #footer__main -------------------------------------------------------- */
+  &__main {
+    display: flex;
+    flex-direction: row;
+
+    /*
+    *
+    *
+    */
+  }
+
+  /** #footer__social------------------------------------------------------- */
+  &__social {
+    padding: 0 1.875rem;
+    margin-bottom: 0;
+
+    &-list {
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid rgb(0 0 0 / 30%);
+      padding-top: 1.25rem;
+
+      li {
+        margin: 0.5rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  /** #footer__legal ------------------------------------------------------- */
+  &__leagal {
+    padding: 0.5rem 1.875rem 1rem;
+    background-color: rgb(0 0 0 / 3%);
+
+    &-list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      li {
+        margin: 0.125rem 0.625rem;
+        white-space: nowrap;
+      }
+    }
+  }
+}
