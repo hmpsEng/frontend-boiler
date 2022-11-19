@@ -1,5 +1,4 @@
 # frontend-boiler
-friendships lost
 
 .ignored ok  
 assets  
